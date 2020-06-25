@@ -20,6 +20,9 @@ public class ViveController : MonoBehaviour
     public SteamVR_Action_Vector2 trackPadPosition = SteamVR_Actions.default_TrackPadPosition;
 
 
+    private SteamVR_Action_Vibration haptic = SteamVR_Actions.default_Haptic;
+
+
     void Awake()
     {
         trigger = SteamVR_Actions.default_InteractUI;
@@ -31,6 +34,7 @@ public class ViveController : MonoBehaviour
         // 한 번 클릭했을 때 trigger 값을 호출
         {
             Debug.Log("왼손 트리거 버튼");
+            haptic.Execute(0.2f, 0.3f, 120.0f, 0.7f, leftHand);
         }
 
         if (trigger.GetStateUp(rightHand))
