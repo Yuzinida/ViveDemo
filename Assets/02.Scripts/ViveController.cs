@@ -50,6 +50,6 @@ public class ViveController : MonoBehaviour
             Debug.Log($"터치 포스 x = {pos.x}, y = {pos.y}");
 
         }
-
+        //코드가 중복되어서 삭제함
     }
 }
